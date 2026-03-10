@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    printf("Dziala!\n");
-    return 0;
+    for ( int i = 0; i < 10; i++)
+    {
+        printf("Dziala!!!\n");
+    };
 }
