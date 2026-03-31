@@ -12,3 +12,4 @@ int main() {
     printf("Obwod prostokata: %f\n", obwod);
     return 0;
 }
+
