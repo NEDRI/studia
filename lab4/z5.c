@@ -1,17 +1,16 @@
 #include <stdio.h>
 
 int main() {
-
-    float a=5;
-    printf("podaj liczbe");
-    //scanf("%f",&a);
-
-    if (a%2==0)
+    int a = 4;
+    printf("podaj liczbe\n");
+    
+    if (a % 2 == 0) {
+        printf("jest parzyste");
+    }
+    else
     {
-        
+        printf("nie jest parzyste");
     }
     
-
     return 0;
 }
-a % 2
