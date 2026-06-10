@@ -7,6 +7,6 @@ int main() {
     scanf("%f %f",&R1,&R2);
     float R=(R1*R2)/(R1+R2);
     printf("Wynik: %f",R);
-
+<br></bt>
     return 0;
 }

@@ -14,3 +14,18 @@ int main() {
     
     return 0;
 }
+
+r > tab[i]{
+
+    r = tab[i]
+}
+
+t = 23
+
+temperutra (t)
+{
+    napisz 1 jezeli na c 
+    napisz 0 na f
+
+    if 1 
+}
