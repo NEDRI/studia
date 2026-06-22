@@ -4,20 +4,30 @@ int main() {
 
     float nominalna = 50.00;
     float tolerancja = 0.10;
-    float pomiar[6] = {50.02, 49.95, 50.13, 49.88, 50.00, 50.08};
+    int n;
     int licznikP = 0;
     int licznikN = 0;
-    float max = pomiar[0];
-    float min = pomiar[0];
     float suma = 0.0;
     float maxOdch = 0.0;
 
-    printf("Raport kontroli jakosci:\n");
+    printf("Podaj liczbe pomiarow: "); 
+    scanf("%d", &n);
+
+    float pomiar[n];
+    for (int i = 0; i < n; i++) {
+        printf("Pomiar %d: ", i + 1);
+        scanf("%f", &pomiar[i]);
+    }
+
+    float max = pomiar[0];
+    float min = pomiar[0];
+
+    printf("\nRaport kontroli jakosci:\n");
     printf("Wartosc nominalna: %.2f mm\n", nominalna);
     printf("Tolerancja: +/- %.2f mm\n", tolerancja);
     printf("Zakres poprawny: %.2f - %.2f mm\n\n", nominalna - tolerancja, nominalna + tolerancja);
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < n; i++) {
         float odchylenie = pomiar[i] - nominalna;
         printf("Pomiar %d: %.2f mm  Odchylka: %.2f mm  ", i + 1, pomiar[i], odchylenie);
 
@@ -48,8 +58,8 @@ int main() {
         }
     }
 
-    float srednia = suma / 6;
-    float procent = (float)licznikP / 6 * 100.0;
+    float srednia = suma / n;
+    float procent = (float)licznikP / n * 100.0;
 
     printf("\nLiczba detali poprawnych: %d\n", licznikP);
     printf("Liczba detali niepoprawnych: %d\n", licznikN);
