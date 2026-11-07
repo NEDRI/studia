@@ -3,7 +3,7 @@ import time
 
 SERVER_IP = "127.0.0.1"
 PORT = 5000
-TIMEOUT = 3     
+TIMEOUT = 3     j
 RETRY_DELAY = 3
 
 
