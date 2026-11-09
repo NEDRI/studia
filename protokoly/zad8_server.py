@@ -6,11 +6,12 @@ PORT = 5000
 temperature = 23.7
 speed = 1450
 motor = "OFF"
+alarm = 0
 
 
 def handle_command(command):
     """Interpretuje polecenie i zwraca odpowiedź protokołu."""
-    global motor, speed
+    global motor, speed, alarm
 
     parts = command.split(":")
 
@@ -23,6 +24,10 @@ def handle_command(command):
             return f"SPEED={speed}"
         if parts[1] == "MOTOR":
             return f"MOTOR={motor}"
+        if parts[1] == "ALARM":
+            return f"ALARM={alarm}"
+        if parts[1] == "STATUS":
+            return f"MOTOR={motor};SPEED={speed};ALARM={alarm}"
         return "ERR:UNKNOWN_PARAMETER"
 
     if parts[0] == "WRITE":
@@ -36,16 +41,21 @@ def handle_command(command):
             if value not in ("ON", "OFF"):
                 return "ERR:INVALID_VALUE"
             motor = value
-            return "ACK"
+            return f"ACK:MOTOR={motor}"
 
         if name == "SPEED":
             try:
                 speed = int(value)
             except ValueError:
-                return "ERR:INVALID_VALUE" 
-            return "ACK"
+                return "ERR:INVALID_VALUE"
+            alarm = 1 if speed > 3000 else alarm
+            return f"ACK:SPEED={speed}"
 
         return "ERR:UNKNOWN_PARAMETER"
+
+    if command == "RESET:ALARM":
+        alarm = 0
+        return "ACK:ALARM=0"
 
     return "ERR:UNKNOWN_COMMAND"
 

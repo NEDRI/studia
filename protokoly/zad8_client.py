@@ -3,7 +3,7 @@ import time
 
 SERVER_IP = "127.0.0.1"
 PORT = 5000
-TIMEOUT = 3     j
+TIMEOUT = 3
 RETRY_DELAY = 3
 
 
@@ -28,7 +28,7 @@ def connect():
         time.sleep(RETRY_DELAY)
 
 
-print("Polecenia: READ:TEMP, READ:SPEED, READ:MOTOR, WRITE:MOTOR:ON/OFF, WRITE:SPEED:<liczba>, exit")
+print("Polecenia: READ:TEMP, READ:SPEED, READ:MOTOR, WRITE:MOTOR:ON/OFF, WRITE:SPEED:<liczba>, READ:STATUS, READ:ALARM, RESET:ALARM, exit")
 
 client = None
 try:
