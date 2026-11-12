@@ -2,17 +2,17 @@
 
 ---
 
-## L0 – Wprowadzenie do Pythona (programy w `L0/`)
+## L0 – Wprowadzenie do Pythona (programy w `L0_wprowadzenie_python/`)
 
 | Zadanie | Plik | Wynik testu |
 |---|---|---|
-| 1 | `L0/zad1.py` | `Nazywam się Jan i mam 20 lat.` |
-| 2 | `L0/zad2.py` | Jan / 20 → `Witaj Jan!  Masz 20 lat.` |
-| 3 | `L0/zad3.py` | 10 i 4 → 14, 6, 40, 2.5; b = 0 → komunikat zamiast błędu |
-| 4 | `L0/zad4.py` | 60 → brak, 80 → brak, 95 → ostrzeżenie |
-| 5 | `L0/zad5.py` | 11.5 → za niskie, 12 → OK, 13.8 → OK |
-| 6 | `L0/zad6.py` | 70 → prawidłowa, 90 → podwyższona, 110 → ALARM |
-| 7 | `L0/zad7.py` | 6000 → krytyczna, 4000 → wysoka, 1500 → prawidłowa, 0 → zatrzymany |
+| 1 | `L0_wprowadzenie_python/zad1.py` | `Nazywam się Jan i mam 20 lat.` |
+| 2 | `L0_wprowadzenie_python/zad2.py` | Jan / 20 → `Witaj Jan!  Masz 20 lat.` |
+| 3 | `L0_wprowadzenie_python/zad3.py` | 10 i 4 → 14, 6, 40, 2.5; b = 0 → komunikat zamiast błędu |
+| 4 | `L0_wprowadzenie_python/zad4.py` | 60 → brak, 80 → brak, 95 → ostrzeżenie |
+| 5 | `L0_wprowadzenie_python/zad5.py` | 11.5 → za niskie, 12 → OK, 13.8 → OK |
+| 6 | `L0_wprowadzenie_python/zad6.py` | 70 → prawidłowa, 90 → podwyższona, 110 → ALARM |
+| 7 | `L0_wprowadzenie_python/zad7.py` | 6000 → krytyczna, 4000 → wysoka, 1500 → prawidłowa, 0 → zatrzymany |
 
 **Zad. 1**
 - `imie` ma typ `str` (napis).
@@ -34,7 +34,7 @@
 
 ---
 
-## Lab1 – Protokoły komunikacyjne
+## Lab1 – Protokoły komunikacyjne (folder `Lab1_siec/`)
 
 Zadania 1–7 wykonuje się w `cmd` na komputerze w sali. Wartości zależą od stanowiska, więc trzeba je wpisać samemu. Poniżej jest opis, gdzie szukać każdej informacji.
 
@@ -73,7 +73,7 @@ Za drugim razem w tablicy pojawia się (albo odświeża) wpis `IP_sąsiada  MAC_
 - `LinkSpeed` to prędkość, np. 1 Gbps.
 - To samo znajdziesz w Menedżerze urządzeń: *Karty sieciowe → Właściwości* (zakładki *Ogólne* i *Szczegóły*).
 
-### Zadanie 8 – `lab1_zad8.py`
+### Zadanie 8 – `Lab1_siec/zad8.py`
 Program wypisuje nazwę komputera (`socket.gethostname()`) i adres IPv4 aktywnego interfejsu. Potem robi odwrotne zapytanie `socket.gethostbyaddr(ipv4)`, które zwraca krotkę `(nazwa_hosta, aliasy, lista_adresów)`. Wynik testu:
 ```
 Nazwa komputera: eos
@@ -84,7 +84,7 @@ Adresy z gethostbyaddr(): 192.168.6.212
 
 ---
 
-## Lab2 – Ethernet, TCP i UDP
+## Lab2 – Ethernet, TCP i UDP (programy w `Lab2_tcp_udp/`, uruchamiać z tego folderu)
 
 | Rozdział | Pliki |
 |---|---|
