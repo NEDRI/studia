@@ -9,3 +9,8 @@ __pycache__/
 
 # pliki blokady LibreOffice
 .~lock.*#
+
+# skompilowane programy C (pliki bez rozszerzenia) – zostają tylko źródła
+programowanie_c/**/*
+!programowanie_c/**/
+!programowanie_c/**/*.*
